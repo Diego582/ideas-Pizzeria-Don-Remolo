@@ -1,0 +1,13 @@
+version: '3'
+services:
+  react:
+    image: node:16
+    volumes:
+      - ./react:/app
+    working_dir: /app
+    environment:
+      REACT_APP_NODE_URL: $NODE_URL
+    command: ['npm','start']
+    ports:
+      - $REACT_PORT:3000   
+ 
